@@ -1,0 +1,8 @@
+{
+  "awemeId": "7007",
+  "contentType": "image",
+  "images": [
+    { "sourceUrl": "https://media.example/g1-1.jpg", "mimeType": "image/jpeg", "width": 1080, "height": 1440, "expectedSize": 100 }
+  ],
+  "music": { "sourceUrl": "https://media.example/g1-music.mp3", "mimeType": "audio/mpeg", "expectedSize": 200 }
+}

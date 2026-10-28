@@ -1,0 +1,48 @@
+{
+  "status_code": 0,
+  "status_msg": "",
+  "extra": { "logid": "sanitized", "now": 1720000000 },
+  "aweme_detail": {
+    "aweme_id": "7600224486650121999",
+    "aweme_type": 4,
+    "desc": "sanitized protocol fixture",
+    "author": { "nickname": "fixture author", "sec_uid": "redacted" },
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "play_addr": {
+        "uri": "v0200fixture",
+        "url_list": ["https://v.example.com/fallback.mp4?x-expires=1999999999"],
+        "data_size": 333
+      },
+      "bit_rate": [
+        {
+          "gear_name": "720p_h264",
+          "bit_rate": 1200000,
+          "is_h265": 0,
+          "play_addr": {
+            "uri": "v0200fixture-720",
+            "url_list": ["https://v.example.com/720.mp4?x-expires=1999999999"],
+            "width": 720,
+            "height": 1280,
+            "data_size": 111
+          }
+        },
+        {
+          "gear_name": "1080p_h264",
+          "bit_rate": 2400000,
+          "is_h265": 0,
+          "play_addr": {
+            "uri": "v0200fixture-1080",
+            "url_list": ["https://v.example.com/1080.mp4?x-expires=1999999999"],
+            "width": 1080,
+            "height": 1920,
+            "data_size": 222
+          }
+        }
+      ]
+    },
+    "statistics": { "digg_count": 123 },
+    "risk_infos": { "warn": false }
+  }
+}

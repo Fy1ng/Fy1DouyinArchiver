@@ -1,0 +1,13 @@
+app/** text eol=lf
+app/**/*.png binary
+scripts/*.mjs text eol=lf
+package.json text eol=lf
+package-lock.json text eol=lf
+tsconfig.json text eol=lf
+dist/*.html text eol=lf
+dist/*.json text eol=lf
+dist/assets/*.js text eol=lf
+dist/assets/*.css text eol=lf
+dist/assets/** -whitespace
+src-tauri/nsis/installer-template.nsi text eol=crlf
+src-tauri/icons/*.ico binary

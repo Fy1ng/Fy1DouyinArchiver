@@ -1,0 +1,13 @@
+{
+  "pageUrl": "https://www.douyin.com/user/self?showTab=record",
+  "state": {
+    "candidates": [
+      {
+        "uid": "112233445566",
+        "secUid": "MS4wLjABAAAAfixture-sec-uid",
+        "nickname": "Fixture User",
+        "avatarUrl": "https://p3-pc-sign.douyinpic.com/fixture.jpeg"
+      }
+    ]
+  }
+}

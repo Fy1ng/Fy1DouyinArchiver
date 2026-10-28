@@ -1,0 +1,14 @@
+{
+  "awemeId": "7003",
+  "contentType": "live_photo",
+  "livePhotos": [
+    {
+      "image": { "sourceUrl": "https://media.example/live-1.jpg", "mimeType": "image/jpeg", "width": 1080, "height": 1440 },
+      "video": { "formats": [{ "id": "live-1", "width": 1080, "height": 1440, "bitrate": 2500000, "codec": "h264", "mimeType": "video/mp4", "expectedSize": null, "sourceUrl": "https://media.example/live-1.mp4", "requestHeaders": {}, "sourceExpiresAt": null }] }
+    },
+    {
+      "image": { "sourceUrl": "https://media.example/live-2.jpg", "mimeType": "image/jpeg", "width": 1080, "height": 1440 },
+      "video": { "formats": [{ "id": "live-2", "width": 1080, "height": 1440, "bitrate": 2400000, "codec": "h264", "mimeType": "video/mp4", "expectedSize": null, "sourceUrl": "https://media.example/live-2.mp4", "requestHeaders": {}, "sourceExpiresAt": null }] }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "awemeId": "7006",
+  "contentType": "video",
+  "video": { "formats": [{ "id": "signed", "width": 1920, "height": 1080, "bitrate": 5000000, "codec": "h264", "mimeType": "video/mp4", "expectedSize": 999, "sourceUrl": "https://media.example/signed?token=secret", "requestHeaders": { "Cookie": "session=secret", "Authorization": "Bearer secret" }, "sourceExpiresAt": "2026-07-12T12:00:00Z" }] }
+}

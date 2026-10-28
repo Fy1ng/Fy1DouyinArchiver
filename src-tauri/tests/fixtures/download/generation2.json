@@ -1,0 +1,9 @@
+{
+  "awemeId": "7007",
+  "contentType": "image",
+  "images": [
+    { "sourceUrl": "https://media.example/g2-1-signed.jpg", "mimeType": "image/jpeg", "width": 1080, "height": 1440, "expectedSize": 100 },
+    { "sourceUrl": "https://media.example/g2-3.jpg", "mimeType": "image/jpeg", "width": 1080, "height": 1440, "expectedSize": 300 },
+    { "sourceUrl": "https://media.example/g2-4.jpg", "mimeType": "image/jpeg", "width": 1080, "height": 1440, "expectedSize": 400 }
+  ]
+}

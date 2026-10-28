@@ -1,0 +1,71 @@
+{
+  "authenticated": {
+    "app": {
+      "user": {
+        "isLogin": true,
+        "info": {
+          "uid": "112233445566",
+          "secUid": "MS4wLjABAAAAfixture-sec-uid",
+          "nickname": "Fixture User",
+          "avatarUrl": "https://p3-pc-sign.douyinpic.com/fixture.jpeg"
+        }
+      }
+    }
+  },
+  "loggedOut": {
+    "app": {
+      "user": {
+        "isLogin": false,
+        "info": {}
+      }
+    }
+  },
+  "unlinked": [
+    {
+      "source": "fixture_uid",
+      "value": {
+        "isLogin": true,
+        "info": { "uid": "112233445566" }
+      }
+    },
+    {
+      "source": "fixture_sec_uid",
+      "value": {
+        "isLogin": true,
+        "info": { "secUid": "MS4wLjABAAAAfixture-sec-uid" }
+      }
+    }
+  ],
+  "conflicting": [
+    {
+      "source": "fixture_first",
+      "value": {
+        "isLogin": true,
+        "info": { "uid": "112233445566", "secUid": "sec-first" }
+      }
+    },
+    {
+      "source": "fixture_second",
+      "value": {
+        "isLogin": true,
+        "info": { "uid": "998877665544", "secUid": "sec-second" }
+      }
+    }
+  ],
+  "mixedLogin": [
+    {
+      "source": "fixture_logged_in",
+      "value": {
+        "isLogin": true,
+        "info": { "uid": "112233445566" }
+      }
+    },
+    {
+      "source": "fixture_logged_out",
+      "value": {
+        "isLogin": false,
+        "info": {}
+      }
+    }
+  ]
+}

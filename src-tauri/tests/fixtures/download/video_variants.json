@@ -1,0 +1,10 @@
+{
+  "awemeId": "7001",
+  "contentType": "video",
+  "video": {
+    "formats": [
+      { "id": "4k", "width": 3840, "height": 2160, "bitrate": 12000000, "codec": "h265", "mimeType": "video/mp4", "expectedSize": 4000, "sourceUrl": "https://media.example/4k", "requestHeaders": {}, "sourceExpiresAt": null },
+      { "id": "1080-h264", "width": 1920, "height": 1080, "bitrate": 6000000, "codec": "h264", "mimeType": "video/mp4", "expectedSize": 2000, "sourceUrl": "https://media.example/1080", "requestHeaders": {}, "sourceExpiresAt": null }
+    ]
+  }
+}
