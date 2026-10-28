@@ -1194,19 +1194,28 @@ fn probe_rejects_a_real_read_only_acl_directory() {
         .arg("/inheritance:r")
         .arg("/grant:r")
         .arg(format!("{user}:(OI)(CI)(RX)"))
+        .arg("/deny")
+        .arg(format!("{user}:(OI)(CI)(W)"))
         .status()
         .unwrap()
         .success());
 
+    let write_probe = fs::write(target.join("acl-write-probe"), b"must be denied");
     let result = probe_data_root_permissions(&target);
     let restored = Command::new("icacls")
         .arg(&target)
+        .arg("/remove:d")
+        .arg(&user)
         .arg("/grant:r")
         .arg(format!("{user}:(OI)(CI)(F)"))
         .status()
         .unwrap()
         .success();
     assert!(restored);
+    assert_eq!(
+        write_probe.unwrap_err().kind(),
+        std::io::ErrorKind::PermissionDenied
+    );
     assert_eq!(result.unwrap_err().code(), "data_root_permission_denied");
     fs::remove_dir_all(root).unwrap();
 }
