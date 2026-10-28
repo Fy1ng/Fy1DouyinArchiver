@@ -9,9 +9,9 @@ Prepare the repository for public source release one item at a time. Publication
 ## Current Position
 
 - Branch: `codex/stage-three-roadmap`
-- Active roadmap section: phase 27 Dependency security remediation (complete)
-- Last completed task: updated TLS, frontend-toolchain and updater/ZIP dependencies; full regressions pass, native vulnerabilities are cleared, and the remaining upstream development-only low finding is documented
-- Current task: guide public README and privacy documentation preparation; authenticated Favorites acceptance and installer rebuild remain deferred
+- Active roadmap section: phase 28 Public README and privacy documentation (complete)
+- Last completed task: installed the requested README skill, rebuilt the public README with a labeled demo screenshot and verified commands, documented privacy, and synchronized third-party notice versions
+- Current task: guide GitHub CI and contribution-entry preparation; authenticated Favorites acceptance and installer rebuild remain deferred
 - Public-source staging: sibling `../Emily-public`, independent `main` history containing only sanitized public-source commits and no remote; keep development in this repository and refresh the public snapshot after later preparation items
 - Execution mode: primary agent owns implementation, integration, and verification; no plan/design audit agents are used
 
@@ -46,10 +46,11 @@ Prepare the repository for public source release one item at a time. Publication
 | 25. Open-source licensing | complete | GPL-3.0-only text and metadata agree, third-party attribution is recorded, frontend provenance remains valid, and the scoped change is verified and committed locally |
 | 26. Open-source privacy and fresh public history | complete | Current personal identifiers are redacted, sensitive runtime files are ignored without excluding source, focused checks pass, and an independent public repository contains one initial commit with the user-approved public author identity while development history remains local |
 | 27. Dependency security remediation | complete | TLS and updater/ZIP fixes pass full regressions; Cargo.lock has no vulnerability advisories, npm has no moderate/high/critical findings, the upstream development-only deepmerge low finding is tracked, notices are refreshed, and the independent public snapshot is synchronized |
+| 28. Public README and privacy documentation | complete | The requested beautify-github-readme skill is installed; README describes current functionality, build/development and first-run use with a labeled demo screenshot; privacy, limits and notices are accurate; local links/assets and wide/narrow light/dark previews pass |
 
 ## Next Action
 
-Guide the public README and privacy documentation item, covering the current feature scope, non-official status, installation/development requirements, local login/data storage, backup privacy and known acceptance limits. Keep the open deepmerge development-tool finding visible in `docs/dependency-security.md`. Option A remains approved: preserve private development history locally and publish only the sanitized independent repository after separate publication authorization. Do not push either repository or import private development refs into the public repository. Refresh the public snapshot after later preparation changes. Authenticated Favorites acceptance, corresponding source and complete native binary notices remain required before the next installer release.
+Guide GitHub CI and contribution-entry preparation, using the locked frontend toolchain and Windows Rust checks without real account credentials. Keep the documented deepmerge development-tool finding visible. Option A remains approved: preserve private development history locally and publish only the sanitized independent repository after separate publication authorization. Do not push either repository or import private development refs into the public repository. Refresh the public snapshot after later preparation changes. Authenticated Favorites acceptance, corresponding source and complete native binary notices remain required before the next installer release.
 
 ## Working Rules
 

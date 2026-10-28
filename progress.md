@@ -1059,3 +1059,11 @@
 - RustSec audit now reports zero vulnerability advisories and no yanked dependencies. Its five informational findings are outside the actual Windows build graph. npm production audit reports zero, while the complete audit retains only three low entries for the same unpatched development-only deepmerge issue. The remaining issue and release limits are documented in docs/dependency-security.md.
 - Refreshed third-party inventory for 181 npm entries and 316 enabled Windows Rust dependencies, corrected optional-edge scope, verified unchanged frontend outputs, and prepared the matching sanitized public-source maintenance commit. Original private history remains local.
 - No GitHub remote or push, installer build, signed installation or managed-state cleanup occurred. Continue with the public README/privacy item.
+
+# 2026-10-29 Public README And Privacy Documentation
+
+- Installed oil-oil/beautify-github-readme using the Codex skill-installer helper, read the installed workflow and relevant content/visual references, and applied whole-README mode.
+- Completed the public README with existing branding, a labeled 1200x840 browser-demo library screenshot, feature outcomes, source-build/first-run/development steps, privacy summary and explicit known limits. Added docs/privacy.md and synchronized the old version numbers remaining in native third-party notice prose.
+- Passed the skill README audit, local link and image checks, command-path checks, light/dark wide/narrow visual checks and privacy/source-manifest checks. The screenshot is about 63 KB, contains no private account data and has no ancillary PNG metadata. Application sources and dependencies are unchanged.
+- Prepared the matching sanitized public-source commit. No GitHub publication, installer build, actual login or managed-state cleanup is part of this documentation task.
+- Continue with GitHub CI and contribution-entry preparation.

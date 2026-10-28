@@ -58,8 +58,8 @@ The reviewed dependency declarations do not expose an obvious blocker to the
 project's GPLv3 choice. This does not waive any upstream obligations. In
 particular:
 
-- `cssparser` 0.36.0, `cssparser-macros` 0.6.1, `dtoa-short` 0.3.5,
-  `option-ext` 0.2.0, and `selectors` 0.36.1 use MPL-2.0. No secondary-license
+- `cssparser` 0.37.0, `cssparser-macros` 0.7.1, `dtoa-short` 0.3.5,
+  `option-ext` 0.2.0, and `selectors` 0.38.0 use MPL-2.0. No secondary-license
   opt-out was found in the inspected package sources outside the standard
   license template. Preserve their notices and source availability obligations;
   MPL-2.0 section 3.3 governs combination with GPL-covered code. Do not relabel
@@ -69,7 +69,7 @@ particular:
   a choice between them.
 - `unicode-ident` 1.0.24 requires Unicode-3.0 in addition to its MIT or Apache
   license choice. The ICU-related Unicode-3.0 notices must also be preserved.
-- `webpki-roots` 1.0.9 distributes certificate data under CDLA-Permissive-2.0.
+- `webpki-roots` 1.0.11 distributes certificate data under CDLA-Permissive-2.0.
   Section 2.1 requires the agreement text to accompany shared data.
 - `rusqlite` and its Rust bindings use MIT. The bundled SQLite amalgamation has
   its own public-domain dedication; do not treat that as the license of the Rust
