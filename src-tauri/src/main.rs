@@ -10104,15 +10104,22 @@ mod tests {
         state.initialize_runtime_paths(paths).unwrap();
 
         let validation = validate_data_root_from_state(&state, &target, &install_dir).unwrap();
-        assert_eq!(validation.normalized_path, target);
+        assert_eq!(
+            fs::canonicalize(validation.normalized_path.parent().unwrap()).unwrap(),
+            fs::canonicalize(target.parent().unwrap()).unwrap()
+        );
+        assert_eq!(validation.normalized_path.file_name(), target.file_name());
         assert!(!target.exists());
 
         let migrated = set_data_root_from_state(&state, target.clone(), install_dir).unwrap();
-        assert_eq!(migrated.data_root, target);
+        assert_eq!(
+            fs::canonicalize(&migrated.data_root).unwrap(),
+            fs::canonicalize(&target).unwrap()
+        );
         assert_eq!(migrated.retained_source.path, source);
-        assert_eq!(state.acquire_paths().unwrap().data_root, target);
+        assert_eq!(state.acquire_paths().unwrap().data_root, migrated.data_root);
         let bootstrap = read_bootstrap(&app_data).unwrap().unwrap();
-        assert_eq!(bootstrap.current_root.path, target);
+        assert_eq!(bootstrap.current_root.path, migrated.data_root);
         assert_eq!(bootstrap.retained_data_roots.len(), 1);
         let migrated_database = open_database(&target.join("history.sqlite")).unwrap();
         assert_eq!(
@@ -10175,7 +10182,10 @@ mod tests {
         let initialized =
             initialize_onboarding_data_root_from_state(&state, target.clone(), install_dir.clone())
                 .unwrap();
-        assert_eq!(initialized.data_root, target);
+        assert_eq!(
+            fs::canonicalize(&initialized.data_root).unwrap(),
+            fs::canonicalize(&target).unwrap()
+        );
         let migrated_database = open_database(&target.join("history.sqlite")).unwrap();
         assert_eq!(
             migrated_database

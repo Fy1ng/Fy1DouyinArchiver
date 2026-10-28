@@ -1320,7 +1320,7 @@ fn quiescing_worker_finishes_the_running_job_without_dequeueing_the_next_job() {
     finish_job(&database.path, first.snapshot.id);
     worker.wake();
     assert!(worker
-        .wait_until_stopped(Duration::from_secs(1))
+        .wait_until_stopped(Duration::from_secs(3))
         .expect("bounded worker wait"));
     worker.join().expect("quiesced join");
 

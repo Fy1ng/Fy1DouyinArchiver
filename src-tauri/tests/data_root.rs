@@ -33,7 +33,7 @@ fn temp_root(label: &str) -> PathBuf {
         std::process::id()
     ));
     fs::create_dir_all(&root).unwrap();
-    root
+    canonical_display(&root)
 }
 
 fn context(root: &Path) -> DataRootContext {
