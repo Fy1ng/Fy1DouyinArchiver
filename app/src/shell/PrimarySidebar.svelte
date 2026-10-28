@@ -48,7 +48,7 @@
 <aside class="app-sidebar" class:is-collapsed={collapsed} aria-label="应用侧栏">
   <div class="brand-block">
     <span class="brand-mark"><img src={appIconUrl} alt="" aria-hidden="true" draggable="false" /></span>
-    <span class="brand-copy"><strong>抖音归档器</strong><small>非官方本地归档工具</small></span>
+    <span class="brand-copy"><strong>Fy1Douyin<wbr />Archiver</strong><small>非官方本地归档工具</small></span>
     <button
       class="icon-button sidebar-collapse"
       type="button"

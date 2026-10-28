@@ -1,5 +1,5 @@
 param(
-  [string]$Installer = "src-tauri/target/release/bundle/nsis/抖音观看历史归档器_0.1.0_x64-setup.exe",
+  [string]$Installer = "src-tauri/target/release/bundle/nsis/Fy1DouyinArchiver_0.1.0_x64-setup.exe",
   [Parameter(Mandatory = $true)][string]$ExpectedSha256,
   [ValidateRange(1, 120)][int]$IdleMinutes = 10,
   [ValidateRange(1, 180)][int]$TimeoutMinutes = 30,

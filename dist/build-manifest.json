@@ -12,7 +12,7 @@
   "inputs": [
     {
       "path": "app/index.html",
-      "sha256": "6d6ba01f2ab395e6df25e0cf122e855ebf5d72c75ae622e0bf5ccd0a3d3705c5"
+      "sha256": "77f9948cf771436bf58981cf3337bd191cb9efd03afa20fa01a3718a637a8e4e"
     },
     {
       "path": "app/src/AccountWorkspace.svelte",
@@ -24,7 +24,7 @@
     },
     {
       "path": "app/src/AnnualReviewPage.svelte",
-      "sha256": "fdce6465c1bb2202c00dbb91f69061ca2c622b3ea1e2e4457e3189ae0fae38da"
+      "sha256": "ad1dd569e39dc313e3f53fb9bbd9631e607a635dcea18928b620648da0971c57"
     },
     {
       "path": "app/src/AnnualReviewPage.test.ts",
@@ -32,7 +32,7 @@
     },
     {
       "path": "app/src/App.svelte",
-      "sha256": "c419fb0a03df648b5a24b8f837d0d8d8318d97b03565c82c4d33ed986f5d4321"
+      "sha256": "6c4841999063b08074321ac9704f25906cfca4781672bc0e08364b59025fe1e7"
     },
     {
       "path": "app/src/App.test.ts",
@@ -124,7 +124,7 @@
     },
     {
       "path": "app/src/app-api.ts",
-      "sha256": "4070bdf5252746cb4537b9ee90b5eeecdcb78d56ed8d074cb735d872cc8a7c9d"
+      "sha256": "3bbb9e89c2e5f74f7e83d0de8afaef9ad54eb5534c5efc8b63460a8af97fe558"
     },
     {
       "path": "app/src/content-view.test.ts",
@@ -224,11 +224,11 @@
     },
     {
       "path": "app/src/onboarding/OnboardingWorkspace.svelte",
-      "sha256": "791cc262b022d3dc3a877aadfcf94ef21baeeaeb450ef772ff13d2b20de29e80"
+      "sha256": "f93bf7cbed2e87fb9fba039ed02aa88fdbfa98ce828e34102569c42f10a30ce7"
     },
     {
       "path": "app/src/onboarding/OnboardingWorkspace.test.ts",
-      "sha256": "f8af39f02d0e9b5bf0980701e9fb19905103c3406b5e9130286a55ae869a6f70"
+      "sha256": "6276214897e4b4b0bd427307541aaec8f12bdbaea818d1d96cae455f0f4aa57b"
     },
     {
       "path": "app/src/scheduler.test.ts",
@@ -272,15 +272,15 @@
     },
     {
       "path": "app/src/shell/PrimarySidebar.svelte",
-      "sha256": "600ed9681a85ab7a146dd50f0ec9f8834928fbd92ff0b3c15a43046d8b1782f6"
+      "sha256": "95282c28682400941184106fd246642e070e528d4235828e7124d48f1e1d6ce6"
     },
     {
       "path": "app/src/shell/PrimarySidebar.test.ts",
-      "sha256": "9e0704af06d607eef79170924a1cd27efe3ae436aa84aa0dacce93255e35ffbc"
+      "sha256": "4c39c8c16a09d37edff2ad8540c35339690af95b93d42b402bba441b38bd9fbc"
     },
     {
       "path": "app/src/shell/TitleBar.svelte",
-      "sha256": "331c814bc7374681b4764f1c98a0f1efdcd40b5517c756bea07be898324b450f"
+      "sha256": "518d7ee92f8f65fab9fa2948ac24aa871dd6c40bfa68e371bedfc3607a072abf"
     },
     {
       "path": "app/src/shell/types.ts",
@@ -288,7 +288,7 @@
     },
     {
       "path": "app/src/styles.css",
-      "sha256": "b2551f4a7569f48e5a35bc57fc849679c67f13c8cbb4dadd178d868cdfeabeab"
+      "sha256": "1a973ab04d76065708676014acb06faf83fcbe264bda70181e47f0a96012cf0f"
     },
     {
       "path": "app/src/types.ts",
@@ -326,24 +326,24 @@
       "sha256": "9106138079688143c3622b8d2f0c3a6f62e976997c85a8ecb0a5cdfa2f08f98f"
     },
     {
-      "path": "assets/index-DT9lg4Rc.css",
-      "bytes": 81868,
-      "sha256": "44617cce39db6a16e9b1715518683221c046f069fc153e1e27ccbb123180e79c"
+      "path": "assets/index-CCJ8qrYC.js",
+      "bytes": 327188,
+      "sha256": "7848f98caca9afdec9451b39d8240247493e741a10b2e1706a1b82f9c5ac775c"
     },
     {
-      "path": "assets/index-slslYhW7.js",
-      "bytes": 327085,
-      "sha256": "9625f5ff7e880fd9b5db131650666ee24618360990f87571cb52cad4f6bbf516"
+      "path": "assets/index-CqWJc2zl.css",
+      "bytes": 81877,
+      "sha256": "72aa658e0b139baf2a8802e6a8ef24abda20815f54ca9b6e17d07dbd74005010"
     },
     {
-      "path": "assets/window-BMP6zi9-.js",
+      "path": "assets/window-BhfkFC7W.js",
       "bytes": 13230,
-      "sha256": "782fca99152b5623fdcbffb53fe9f24bf6ac8bf7f16ec6788c09c39473a9dab1"
+      "sha256": "f443969f8866c79babaeffcf49ba5d750d3ead3764a0b6854e66c70be71cf506"
     },
     {
       "path": "index.html",
-      "bytes": 492,
-      "sha256": "49d63bdbc834def25213932b62de650705e91bfa3e219f8c91ee6601113b2c81"
+      "bytes": 482,
+      "sha256": "8efe2f9516fe9031190a8f6fdcaed03d9188f75fbfd66e27ae1edf43e291a54a"
     }
   ]
 }

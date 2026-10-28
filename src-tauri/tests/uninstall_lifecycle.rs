@@ -505,7 +505,7 @@ fn deletion_requires_manifest_ownership_and_preserves_protected_paths() {
     let objects = vec![
         InstallerOwnedObjectV1::StartMenuShortcut {
             path: PathBuf::from(
-                r"C:\Users\Test\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\抖音观看历史归档器.lnk",
+                r"C:\Users\Test\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Fy1DouyinArchiver.lnk",
             ),
         },
         InstallerOwnedObjectV1::UninstallRegistryValue {
@@ -2453,7 +2453,7 @@ fn authentication() -> GuardAuthenticationV1 {
 fn product(build_id: &str, semantic_version: &str) -> ProductIdentityV1 {
     ProductIdentityV1 {
         application_id: APPLICATION_ID.to_string(),
-        product_name: "抖音观看历史归档器".to_string(),
+        product_name: PRODUCT_NAME.to_string(),
         build_id: build_id.to_string(),
         semantic_version: semantic_version.to_string(),
         architecture: "windows-x86_64".to_string(),

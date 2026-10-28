@@ -861,7 +861,7 @@ fn create_tray(app: &AppHandle, state: &AppState) -> Result<(), String> {
         .ok_or_else(|| "tray_icon_missing".to_string())?;
     TrayIconBuilder::with_id(TRAY_ID)
         .icon(icon)
-        .tooltip("抖音观看历史归档器")
+        .tooltip(douyin_history_archive::uninstall::PRODUCT_NAME)
         .menu(&menu)
         .show_menu_on_left_click(false)
         .on_menu_event(|app, event| handle_tray_menu_event(app, event.id().as_ref()))
@@ -2380,7 +2380,7 @@ async fn choose_backup_export_path(
     let file_name = manual_backup_file_name(Utc::now());
     tauri::async_runtime::spawn_blocking(move || {
         rfd::FileDialog::new()
-            .add_filter("Emily 备份", &["emily-backup"])
+            .add_filter(format!("{} 备份", douyin_history_archive::uninstall::PRODUCT_NAME), &["emily-backup"])
             .set_file_name(file_name)
             .save_file()
     })
@@ -2423,7 +2423,7 @@ async fn choose_backup_import_path(
     require_normal_runtime(state.inner())?;
     tauri::async_runtime::spawn_blocking(|| {
         rfd::FileDialog::new()
-            .add_filter("Emily 备份", &["emily-backup"])
+            .add_filter(format!("{} 备份", douyin_history_archive::uninstall::PRODUCT_NAME), &["emily-backup"])
             .pick_file()
     })
     .await

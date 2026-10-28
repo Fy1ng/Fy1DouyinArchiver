@@ -1,6 +1,6 @@
 # 数据与隐私
 
-本文对应当前 Windows x64 源码, 更新于 2026-10-29. Emily 是非官方本地归档工具, 项目不提供云端归档账户或归档托管服务.
+本文对应当前 Windows x64 源码, 更新于 2026-10-29. Fy1DouyinArchiver 是非官方本地归档工具, 项目不提供云端归档账户或归档托管服务.
 
 ## 本地保存什么
 
@@ -19,7 +19,7 @@
 
 ## 登录与浏览器
 
-登录在系统 Microsoft Edge 或 Google Chrome 中完成. Emily 使用应用专用的隔离 profile, 不复用日常浏览器 profile. 账号切换和浏览器选择均由应用管理.
+登录在系统 Microsoft Edge 或 Google Chrome 中完成. Fy1DouyinArchiver 使用应用专用的隔离 profile, 不复用日常浏览器 profile. 账号切换和浏览器选择均由应用管理.
 
 隔离 profile 可能包含 Cookie、登录令牌及其他浏览器状态. 它是敏感的本地资料, 不能因文件保存在本机就视为可公开分享. 不要将 `profiles/` 加入代码仓库、同步给他人或作为问题附件上传.
 

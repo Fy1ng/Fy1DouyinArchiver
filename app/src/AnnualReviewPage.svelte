@@ -63,7 +63,7 @@
 <section class="annual-review-page" aria-label="年度回顾">
   <header class="annual-review-header">
     <div>
-      <span class="eyebrow">Emily archive</span>
+      <span class="eyebrow">Fy1DouyinArchiver</span>
       <h1>{view?.year ?? "年度"} 年度回顾</h1>
       <p>只使用本地归档的观看历史与当前关系快照。</p>
     </div>

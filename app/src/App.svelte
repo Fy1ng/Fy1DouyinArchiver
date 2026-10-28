@@ -3592,7 +3592,7 @@
         </div>
         <div class="settings-section" data-settings-category="diagnostics" data-settings-panel="about" data-settings-panel-label="诊断与关于" data-settings-search-target>
           <div class="settings-section-heading">
-            <div><h3>诊断与关于</h3><p>Emily · 抖音内容本地归档</p></div>
+            <div><h3>诊断与关于</h3><p>Fy1DouyinArchiver · 抖音内容本地归档</p></div>
           </div>
           <div class="settings-about-grid">
             <span>应用版本</span><strong>{updateState?.currentVersion ?? "0.1.0"}</strong>
@@ -3631,7 +3631,7 @@
         <div class="confirmation-content">
           <p>安装前会停止后台任务并创建安全备份。安装程序启动后，应用将退出。</p>
           {#if updateState?.availableVersion}
-            <p>准备安装 Emily {updateState.availableVersion}。</p>
+            <p>准备安装 Fy1DouyinArchiver {updateState.availableVersion}。</p>
           {/if}
           <div class="confirmation-actions">
             <button type="button" on:click={() => (updateInstallConfirmOpen = false)}>取消</button>

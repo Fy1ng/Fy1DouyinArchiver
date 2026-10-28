@@ -32,7 +32,7 @@
 >
   <div class="window-title" data-tauri-drag-region>
     <img src={appIconUrl} alt="" aria-hidden="true" draggable="false" />
-    <span data-tauri-drag-region>抖音观看历史归档器</span>
+    <span data-tauri-drag-region>Fy1DouyinArchiver</span>
   </div>
   <div class="window-controls" aria-label="窗口控制">
     <button type="button" title="最小化" aria-label="最小化" on:click={() => void withCurrentWindow("minimize")}><Minus size={15} strokeWidth={1.7} /></button>

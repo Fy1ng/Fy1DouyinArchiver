@@ -5,7 +5,7 @@
     { title: "账号登录", description: "连接独立的抖音账号资料" },
     { title: "同步设置", description: "选择来源、范围与周期" },
     { title: "数据与桌面", description: "确认存储位置与启动方式" },
-    { title: "确认设置", description: "复核并开始使用 Emily" },
+    { title: "确认设置", description: "复核并开始使用 Fy1DouyinArchiver" },
   ] as const;
 
   let {
@@ -27,9 +27,9 @@
 >
   <aside class="onboarding-brand-pane">
     <div class="onboarding-brand">
-      <img src={appIconUrl} alt="Emily" draggable="false" />
+      <img src={appIconUrl} alt="Fy1DouyinArchiver" draggable="false" />
       <div>
-        <strong>Emily</strong>
+        <strong>Fy1DouyinArchiver</strong>
         <span>抖音内容本地归档</span>
       </div>
     </div>

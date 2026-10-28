@@ -1,6 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "抖音观看历史归档器",
+  "productName": "Fy1DouyinArchiver",
+  "mainBinaryName": "Fy1DouyinArchiver",
   "version": "0.1.0",
   "identifier": "lifearchive.douyin-history-archive",
   "build": {
@@ -9,7 +10,7 @@
   "app": {
     "windows": [
       {
-        "title": "抖音观看历史归档器",
+        "title": "Fy1DouyinArchiver",
         "width": 1080,
         "height": 760,
         "minWidth": 960,

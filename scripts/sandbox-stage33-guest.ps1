@@ -248,7 +248,7 @@ function Get-FailureSnapshot {
   $processes = @(Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
     Where-Object {
       $_.Name -match "(?i)(douyin-history-archive|msedgewebview2|msedge|chrome)" -or
-      ($_.CommandLine -and $_.CommandLine -match "(?i)(EmilyStage33Audit|douyin-history-archive)")
+      ($_.CommandLine -and $_.CommandLine -match "(?i)(EmilyStage33Audit|douyin-history-archive|Fy1DouyinArchiver)")
     } |
     Select-Object Name,ProcessId,ParentProcessId,ExecutablePath,CommandLine)
   $windows = @(Get-Process -ErrorAction SilentlyContinue |
@@ -315,7 +315,7 @@ try {
   Require (-not (Test-Path -LiteralPath $bootstrapDir)) "sandbox bootstrap directory is not clean"
   $install = Start-Process -FilePath $installer.FullName -ArgumentList @("/S", "/D=$installDir") -Wait -PassThru -WindowStyle Hidden
   Require ($install.ExitCode -eq 0) "silent clean install failed: $($install.ExitCode)"
-  $appExe = Join-Path $installDir "douyin-history-archive.exe"
+  $appExe = Join-Path $installDir "Fy1DouyinArchiver.exe"
   Require (Test-Path -LiteralPath $appExe -PathType Leaf) "installed app executable missing"
   Require (Test-Path -LiteralPath (Join-Path $installDir "uninstall.exe") -PathType Leaf) "installed uninstaller missing"
   Add-Event "clean_install" $true @{ installDir = $installDir }
@@ -435,7 +435,7 @@ try {
   } 15 "controlled exit left a process from the captured application tree"
   Require (-not (Test-Path -LiteralPath (Join-Path $bootstrapDir "shutdown-intent.json"))) "clean exit left shutdown marker"
   $residualAppProcesses = @(Get-CimInstance Win32_Process -ErrorAction SilentlyContinue | Where-Object {
-    $_.Name -ieq "douyin-history-archive.exe" -or
+    $_.Name -ieq "Fy1DouyinArchiver.exe" -or
     ($_.CommandLine -and $_.CommandLine -match [Regex]::Escape($installDir))
   })
   Require ($residualAppProcesses.Count -eq 0) "controlled exit left app-related processes"

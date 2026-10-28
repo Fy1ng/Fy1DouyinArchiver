@@ -1644,13 +1644,15 @@ pub fn validate_installer_object_removals(
     }
     const UNINSTALL_KEY: &str =
         r"Software\Microsoft\Windows\CurrentVersion\Uninstall\lifearchive.douyin-history-archive";
-    const SHORTCUT_SUFFIX: &str =
-        r"\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\抖音观看历史归档器.lnk";
+    let shortcut_suffix = format!(
+        r"\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\{PRODUCT_NAME}.lnk"
+    )
+    .to_lowercase();
     for object in objects {
         match object {
             InstallerOwnedObjectV1::StartMenuShortcut { path } => {
                 if !path.is_absolute()
-                    || !normalized_path(path).ends_with(&SHORTCUT_SUFFIX.to_lowercase())
+                    || !normalized_path(path).ends_with(&shortcut_suffix)
                 {
                     return Err("installer_object_not_whitelisted".to_string());
                 }

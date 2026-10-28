@@ -911,7 +911,7 @@ pub fn download_cover(url: &str, max_bytes: usize) -> Result<DownloadedCoverV1, 
         object_name.push('?');
         object_name.push_str(query);
     }
-    let agent = wide("Emily/0.1 cover-cache");
+    let agent = wide("Fy1DouyinArchiver/0.1 cover-cache");
     let session = Handle(unsafe {
         WinHttpOpen(
             agent.as_ptr(),

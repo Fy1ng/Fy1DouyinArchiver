@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="app/src/assets/app-icon.png" width="88" alt="Emily 应用图标">
+  <img src="app/src/assets/app-icon.png" width="88" alt="Fy1DouyinArchiver 应用图标">
 </p>
 
-<h1 align="center">Emily</h1>
+<h1 align="center">Fy1DouyinArchiver</h1>
 
 <p align="center"><strong>把抖音观看历史、喜欢和收藏, 整理到自己的电脑.</strong></p>
 <p align="center">Windows x64 | 本地 SQLite | 多账号归档 | GPL-3.0-only</p>
@@ -14,15 +14,15 @@
   <a href="#开发与验证">开发与验证</a>
 </p>
 
-Emily 是一个非官方 Windows 桌面归档工具. 它通过系统 Edge 或 Chrome 访问本人账号可见的抖音内容, 将归档记录保存到本机, 方便搜索、整理和回顾.
+Fy1DouyinArchiver 是一个非官方 Windows 桌面归档工具. 它通过系统 Edge 或 Chrome 访问本人账号可见的抖音内容, 将归档记录保存到本机, 方便搜索、整理和回顾.
 
-![Emily 资料库界面, 展示来源筛选、跨账号归档记录与本地搜索](assets/readme/library-demo.png)
+![Fy1DouyinArchiver 资料库界面, 展示来源筛选、跨账号归档记录与本地搜索](assets/readme/library-demo.png)
 
 *界面取自当前前端的浏览器演示模式, 使用内置演示账号与样例记录. 不代表真实账号同步验收结果; 点击图片可查看原尺寸.*
 
 ## 可以做什么
 
-| 你想做的事 | Emily 提供的能力 |
+| 你想做的事 | Fy1DouyinArchiver 提供的能力 |
 | --- | --- |
 | 找回浏览过的内容 | 归档观看历史, 按标题或作者搜索, 浏览观看时间等记录 |
 | 整理喜欢和收藏 | 查看喜欢、默认收藏与远端收藏夹, 使用本地收藏夹整理内容 |
@@ -35,7 +35,7 @@ Emily 是一个非官方 Windows 桌面归档工具. 它通过系统 Edge 或 Ch
 
 ## 开始使用
 
-**当前状态: 公开源码准备阶段, 尚未发布与最新源码对应的稳定安装包.** 旧测试安装包不包含本轮全部依赖修复, 请勿将其当作当前版本的发布产物.
+**当前状态: 源码已公开, 尚未发布与最新源码对应的稳定安装包.** 旧测试安装包不包含本轮全部依赖修复, 请勿将其当作当前版本的发布产物.
 
 运行环境:
 
@@ -72,6 +72,8 @@ NSIS 安装包输出到 `src-tauri/target/release/bundle/nsis/`.
 - 默认数据根位于 `%APPDATA%\lifearchive.douyin-history-archive\Data`, 也可以在应用内选择其他位置.
 - **备份未加密.** `.emily-backup` 包含数据库与可迁移设置, 不包含浏览器登录 profile、封面缓存、日志或下载媒体. 数据库本身仍可能包含账号资料、观看记录和内容链接.
 - 备份不恢复登录状态, 更换电脑后需要重新登录. 不要将登录 profile、Cookie、数据库或未脱敏诊断上传到 Issue.
+
+软件名称为 Fy1DouyinArchiver. 为兼容已有数据, 应用标识、受管目录、`.emily-backup` 扩展名及 `EMILY_*` 配置变量保留原有技术名称.
 
 详细说明见 [数据与隐私](docs/privacy.md), 包括网络访问、目录分工、备份范围和反馈前的脱敏要求.
 

@@ -1,7 +1,7 @@
 [package]
 name = "douyin-history-archive"
 version = "0.1.0"
-description = "Douyin viewing history archive desktop app"
+description = "Fy1DouyinArchiver - local Douyin archive desktop app"
 authors = ["LifeArchiveProject"]
 license = "GPL-3.0-only"
 edition = "2021"

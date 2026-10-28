@@ -18,7 +18,7 @@ describe("PrimarySidebar", () => {
       onToggleCollapsed: vi.fn(),
     });
 
-    expect(screen.getByText("抖音归档器")).toBeVisible();
+    expect(screen.getByText("Fy1DouyinArchiver")).toBeVisible();
     expect(screen.getByRole("navigation", { name: "主导航" })).toBeVisible();
     expect(screen.getByRole("button", { name: "资料库" })).toBeVisible();
     expect(screen.getByRole("button", { name: "搜索" })).toBeVisible();

@@ -1,6 +1,6 @@
 # Third-Party Notices
 
-Emily's original code is licensed under GPL-3.0-only. Third-party material keeps
+Fy1DouyinArchiver's original code is licensed under GPL-3.0-only. Third-party material keeps
 its original copyright, license, and attribution requirements. The project
 license does not replace those terms.
 
@@ -49,7 +49,7 @@ verbatim in [tauri-template-MIT.txt](third-party/tauri-template-MIT.txt).
 
 - Upstream license: <https://github.com/tauri-apps/tauri/blob/8909f221d1515955fc843808032bdc5d62209c96/LICENSE_MIT>
 - Copyright: Tauri Apps Contributors, 2017 - Present.
-- Emily's changes implement its package identity and managed uninstall rules;
+- Fy1DouyinArchiver's changes implement its package identity and managed uninstall rules;
   the existing provenance block identifies the original template.
 
 ## Native Dependency Obligations
@@ -88,7 +88,7 @@ source, build scripts, and required notices in a GPL-compliant distribution.
   They are project assets, separate from the Lucide/Feather icon set. Do not
   infer permission to use unrelated third-party trademarks from this license.
 - Douyin account data, video, audio, covers, and other retrieved content are not
-  licensed by Emily's GPL declaration. Their respective rights remain with the
+  licensed by Fy1DouyinArchiver's GPL declaration. Their respective rights remain with the
   relevant rightsholders.
 - System Edge, Chrome, and WebView2 keep their own terms. They are not relicensed
   under GPL. If an installer carries the WebView2 bootstrapper or other external

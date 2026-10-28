@@ -15,7 +15,7 @@ describe("OnboardingWorkspace", () => {
     expect(screen.getByRole("dialog", { name: "首次设置" })).toHaveClass(
       "onboarding-workspace",
     );
-    expect(screen.getByRole("img", { name: "Emily" })).toHaveAttribute(
+    expect(screen.getByRole("img", { name: "Fy1DouyinArchiver" })).toHaveAttribute(
       "src",
       "/app-icon.png",
     );

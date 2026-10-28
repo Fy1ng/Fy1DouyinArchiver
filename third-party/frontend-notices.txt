@@ -1,4 +1,4 @@
-Emily - Third-party frontend notices
+Fy1DouyinArchiver - Third-party frontend notices
 
 These packages contribute to the production frontend. Upstream notices follow.
 For dual-licensed Tauri packages, this distribution uses the MIT option.

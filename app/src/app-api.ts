@@ -129,8 +129,8 @@ const demoAccounts: AccountView[] = [
 let demoActiveAccountId = 1;
 let demoSettingsRevision = 0;
 let demoLegacyImportRequired = true;
-let demoDataRoot = "C:\\Users\\Demo\\AppData\\Roaming\\Emily\\Data";
-const demoInstallDir = "C:\\Program Files\\Emily";
+let demoDataRoot = "C:\\Users\\Demo\\AppData\\Roaming\\lifearchive.douyin-history-archive\\Data";
+const demoInstallDir = "C:\\Program Files\\Fy1DouyinArchiver";
 let demoRetainedDataRoots: AppSettingsView["retainedDataRoots"] = [];
 let demoGlobalSettings: GlobalSettings = {
   theme: "dark",
