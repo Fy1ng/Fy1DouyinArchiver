@@ -1050,3 +1050,12 @@
 - Focused validation passed: runtime 24/24 and frontend manifest 7/7. Sensitive-file and template/source inclusion probes pass, and no original personal identifier remains in tracked content.
 - Prepared a separate sibling public repository, Emily-public, with the same tracked source tree, an independent main root commit, and the user-specified DouyinArchiver public Git identity. Original branches and history remain in the development repository. No remote, GitHub publication, installer build, or managed-state cleanup is included.
 - Continue open-source preparation one item at a time with the locked dependency vulnerability audit. Refresh the independent public snapshot after later preparation changes before asking for publication authorization.
+
+# 2026-10-29 Dependency Security Remediation
+
+- Applied the user-authorized TLS, frontend-toolchain and updater/ZIP dependency upgrades, including compatible Tauri 2.12 updates and removal of Tinypool. No data model, application update flow or signed-update configuration was changed.
+- Rebuilt the frontend with Node 24.15.0/npm 11.12.1 and synchronized the strict Vite 7.3.7 manifest contract. Fixed one Vitest 4 callable-mock type. Typecheck and all 214 frontend tests passed.
+- Focused native tests passed 34/34. Full serial Cargo regression passed 788 tests, with six existing external/browser acceptance tests explicitly ignored.
+- RustSec audit now reports zero vulnerability advisories and no yanked dependencies. Its five informational findings are outside the actual Windows build graph. npm production audit reports zero, while the complete audit retains only three low entries for the same unpatched development-only deepmerge issue. The remaining issue and release limits are documented in docs/dependency-security.md.
+- Refreshed third-party inventory for 181 npm entries and 316 enabled Windows Rust dependencies, corrected optional-edge scope, verified unchanged frontend outputs, and prepared the matching sanitized public-source maintenance commit. Original private history remains local.
+- No GitHub remote or push, installer build, signed installation or managed-state cleanup occurred. Continue with the public README/privacy item.

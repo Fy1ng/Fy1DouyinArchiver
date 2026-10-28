@@ -13,7 +13,7 @@ Windows x64 桌面应用，用于将抖音观看历史持久化到本地 SQLite�
 
 ## 正式构建
 
-需要 Windows x64、Rust、Cargo、Visual Studio C++ Build Tools、`tauri-cli 2.11.4`，以及系统 Edge 或 Chrome。
+需要 Windows x64、Rust 1.95 或更新版本、Cargo、Visual Studio C++ Build Tools、`tauri-cli 2.11.4`，以及系统 Edge 或 Chrome。本次依赖升级使用 Rust 1.96.1 验证。
 
 ```powershell
 cargo install tauri-cli --version 2.11.4 --locked

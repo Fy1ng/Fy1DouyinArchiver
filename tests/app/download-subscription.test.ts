@@ -25,7 +25,7 @@ describe("download refresh subscription", () => {
     const refresh = vi.fn();
     const dispose = installDownloadRefreshSubscription(async (next) => {
       callback = next;
-      return vi.fn();
+      return vi.fn<() => void>();
     }, refresh);
     await Promise.resolve();
 

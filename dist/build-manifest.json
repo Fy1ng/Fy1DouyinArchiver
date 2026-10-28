@@ -4,7 +4,7 @@
   "tools": {
     "node": "24.15.0",
     "npm": "11.12.1",
-    "vite": "7.3.6",
+    "vite": "7.3.7",
     "svelte": "5.56.4",
     "typescript": "5.9.3",
     "sveltePlugin": "6.2.4"
@@ -308,11 +308,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "02c8e696442509ba850daad2c3387eda4a94836193c4957f037372c5e8261e7a"
+      "sha256": "8064adb27a21b5c46033b5639c556fab5a410d68acf54770485154b58bb48708"
     },
     {
       "path": "package.json",
-      "sha256": "88d5a3c8630c128ef79d0821c8008b63102c705b5b6c0026a842bd6996da6eee"
+      "sha256": "275f7a9fbb5c81d4c0afa6528bff1f3962ec1c551f21ebd9e1e73e1bc4d92876"
     },
     {
       "path": "tsconfig.json",

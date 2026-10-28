@@ -122,7 +122,7 @@ fn validate_header(manifest: &Manifest) -> Result<(), String> {
     let expected = [
         (&manifest.tools.node, "24.15.0"),
         (&manifest.tools.npm, "11.12.1"),
-        (&manifest.tools.vite, "7.3.6"),
+        (&manifest.tools.vite, "7.3.7"),
         (&manifest.tools.svelte, "5.56.4"),
         (&manifest.tools.typescript, "5.9.3"),
         (&manifest.tools.svelte_plugin, "6.2.4"),

@@ -7,9 +7,9 @@ license does not replace those terms.
 ## Scope Of This Snapshot
 
 The [dependency inventory](third-party/dependency-inventory.md) records the
-locked npm packages and the non-development Rust dependency graph for
-`x86_64-pc-windows-msvc`, including build dependencies, as reviewed on
-2026-10-28. All 191 npm entries and 344 Rust dependencies declare a license.
+locked npm packages and the enabled normal/build Rust dependency graph for
+`x86_64-pc-windows-msvc`, as reviewed on 2026-10-29. All 181 npm entries
+and 316 Rust dependencies declare a license.
 This is a source-release inventory, not a certification of a future installer.
 Refresh it when either lockfile or the build target changes.
 

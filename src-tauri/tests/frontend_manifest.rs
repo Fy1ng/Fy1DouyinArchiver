@@ -172,7 +172,7 @@ fn write_fixture(root: &Path, omit_source: bool) {
         "tools": {
             "node": "24.15.0",
             "npm": "11.12.1",
-            "vite": "7.3.6",
+            "vite": "7.3.7",
             "svelte": "5.56.4",
             "typescript": "5.9.3",
             "sveltePlugin": "6.2.4"
