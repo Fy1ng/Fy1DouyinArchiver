@@ -1,0 +1,107 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: pwsh
+
+jobs:
+  frontend:
+    name: Frontend
+    runs-on: windows-2025
+    timeout-minutes: 20
+    steps:
+      - name: Preserve source bytes on checkout
+        run: git config --global core.autocrlf false
+
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24.15.0
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Verify frontend toolchain
+        run: |
+          if ((node --version).Trim() -ne 'v24.15.0') {
+            throw 'Node 24.15.0 is required by the frontend manifest'
+          }
+          if ((npm --version).Trim() -ne '11.12.1') {
+            npm install --global npm@11.12.1 --ignore-scripts --no-audit --no-fund
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+          if ((npm --version).Trim() -ne '11.12.1') {
+            throw 'npm 11.12.1 is required by the frontend manifest'
+          }
+
+      - name: Install locked frontend dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Frontend tests
+        run: npm test
+
+      - name: Rebuild frontend and provenance manifest
+        run: npm run app:build
+
+      - name: Verify committed frontend outputs
+        run: |
+          git diff --exit-code -- dist
+          if ($LASTEXITCODE -ne 0) {
+            throw 'Rebuild and commit dist with the required frontend toolchain'
+          }
+          $untracked = @(git ls-files --others --exclude-standard -- dist)
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if ($untracked.Count -gt 0) {
+            throw "Uncommitted frontend outputs: $($untracked -join ', ')"
+          }
+
+  windows-rust:
+    name: Windows Rust
+    runs-on: windows-2025
+    timeout-minutes: 45
+    env:
+      CARGO_TERM_COLOR: always
+      RUST_BACKTRACE: '1'
+    steps:
+      - name: Preserve source bytes on checkout
+        run: git config --global core.autocrlf false
+
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install the verified Rust toolchain
+        run: rustup toolchain install 1.96.1 --profile minimal --no-self-update
+
+      - name: Verify Rust toolchain
+        run: |
+          rustc +1.96.1 --version
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          cargo +1.96.1 --version
+
+      # build.rs validates the committed dist/ before compiling. Tests keep the
+      # browser/real-account cases explicitly ignored and run serially.
+      - name: Native regression and frontend manifest tests
+        run: cargo +1.96.1 test --manifest-path src-tauri/Cargo.toml --locked -- --test-threads=1

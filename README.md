@@ -118,6 +118,8 @@ Remove-Item Env:EMILY_TEST_BROWSER
 
 ## 文档与反馈
 
+- [贡献指南与 CI 检查](CONTRIBUTING.md)
+- [安全问题报告](SECURITY.md)
 - [数据与隐私](docs/privacy.md)
 - [依赖安全记录](docs/dependency-security.md)
 - [第三方声明与依赖清单](THIRD_PARTY_NOTICES.md)

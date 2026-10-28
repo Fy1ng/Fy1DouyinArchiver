@@ -1,0 +1,82 @@
+name: 问题反馈
+description: 报告可复现的功能或构建问题.
+title: '[Bug] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先搜索已有 Issue. 安全漏洞请按仓库根目录 SECURITY.md 私下报告.
+        不要上传 Cookie、登录二维码、profile、数据库、原始备份或未脱敏日志.
+
+  - type: input
+    id: version
+    attributes:
+      label: 应用版本或源码提交
+      description: 请注明安装包来源; 源码构建可填写提交短 SHA.
+      placeholder: '例如: 0.1.0, 源码提交 abc1234'
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行环境
+      description: 填写 Windows 版本、Edge/Chrome 类型与版本. 构建问题请另附 Rust、Node 和 npm 版本.
+      placeholder: |
+        Windows:
+        浏览器及版本:
+        构建工具版本 (仅构建问题):
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 涉及功能
+      options:
+        - 首次设置或登录
+        - 观看历史同步
+        - 喜欢或收藏同步
+        - 资料库或搜索
+        - 下载
+        - 备份或数据目录
+        - 更新或安装
+        - 源码构建
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤与实际结果
+      description: 描述操作顺序、可重复程度和错误代码, 不需要提供真实账号数据.
+      placeholder: |
+        1. 打开...
+        2. 点击...
+        3. 出现...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: 脱敏后的补充信息
+      description: 可选. 仅保留必要的错误信息, 分享截图前遮盖账号、记录和本机路径.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 数据检查
+      options:
+        - label: 我已检查本次反馈不包含登录凭据、真实数据库、原始备份或未脱敏个人信息.
+          required: true

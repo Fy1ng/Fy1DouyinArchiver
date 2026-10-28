@@ -9,9 +9,9 @@ Prepare the repository for public source release one item at a time. Publication
 ## Current Position
 
 - Branch: `codex/stage-three-roadmap`
-- Active roadmap section: phase 28 Public README and privacy documentation (complete)
-- Last completed task: installed the requested README skill, rebuilt the public README with a labeled demo screenshot and verified commands, documented privacy, and synchronized third-party notice versions
-- Current task: guide GitHub CI and contribution-entry preparation; authenticated Favorites acceptance and installer rebuild remain deferred
+- Active roadmap section: phase 29 GitHub CI and contribution entry points (complete)
+- Last completed task: prepared pinned, read-only CI and contribution/security entry points; workflow/form validation and clean-checkout frontend/native command verification pass
+- Current task: guide the first source-publication decision, including GitHub repository name, owner, visibility and exact sanitized commit scope; no publication is authorized yet
 - Public-source staging: sibling `../Emily-public`, independent `main` history containing only sanitized public-source commits and no remote; keep development in this repository and refresh the public snapshot after later preparation items
 - Execution mode: primary agent owns implementation, integration, and verification; no plan/design audit agents are used
 
@@ -47,10 +47,11 @@ Prepare the repository for public source release one item at a time. Publication
 | 26. Open-source privacy and fresh public history | complete | Current personal identifiers are redacted, sensitive runtime files are ignored without excluding source, focused checks pass, and an independent public repository contains one initial commit with the user-approved public author identity while development history remains local |
 | 27. Dependency security remediation | complete | TLS and updater/ZIP fixes pass full regressions; Cargo.lock has no vulnerability advisories, npm has no moderate/high/critical findings, the upstream development-only deepmerge low finding is tracked, notices are refreshed, and the independent public snapshot is synchronized |
 | 28. Public README and privacy documentation | complete | The requested beautify-github-readme skill is installed; README describes current functionality, build/development and first-run use with a labeled demo screenshot; privacy, limits and notices are accurate; local links/assets and wide/narrow light/dark previews pass |
+| 29. GitHub CI and contribution entry points | complete | Pinned read-only frontend/Windows workflows and issue/PR templates validate; locked frontend and native commands pass in a clean local checkout; contribution/security guidance is linked; public source is synchronized, while hosted Actions execution remains pending publication |
 
 ## Next Action
 
-Guide GitHub CI and contribution-entry preparation, using the locked frontend toolchain and Windows Rust checks without real account credentials. Keep the documented deepmerge development-tool finding visible. Option A remains approved: preserve private development history locally and publish only the sanitized independent repository after separate publication authorization. Do not push either repository or import private development refs into the public repository. Refresh the public snapshot after later preparation changes. Authenticated Favorites acceptance, corresponding source and complete native binary notices remain required before the next installer release.
+Present the remaining first-source-publication choices: GitHub owner, repository name, visibility and the exact sanitized `main` commit range. Repository creation, remote configuration and push require explicit authorization. Before any push, recheck the full intended history and staged content for security/privacy, confirm the dependency findings, and report the result. Keep the documented development-only deepmerge finding visible. After publication, inspect the first hosted Actions run; local workflow lint and command verification do not prove a hosted run passed. Do not import private development refs into the independent public repository. Authenticated Favorites acceptance, corresponding source and complete native binary notices remain required before an installer release.
 
 ## Working Rules
 

@@ -1,0 +1,31 @@
+name: 功能建议
+description: 说明想解决的问题和预期使用方式.
+title: '[Feature] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先搜索已有建议. 描述实际需求即可, 不需要上传账号记录或私有数据.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决什么问题
+      description: 说明当前操作中的困难和使用场景.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 希望如何使用
+      description: 描述预期行为, 可使用虚构示例.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 已考虑的替代方式
+    validations:
+      required: false

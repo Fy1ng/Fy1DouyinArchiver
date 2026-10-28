@@ -1067,3 +1067,11 @@
 - Passed the skill README audit, local link and image checks, command-path checks, light/dark wide/narrow visual checks and privacy/source-manifest checks. The screenshot is about 63 KB, contains no private account data and has no ancillary PNG metadata. Application sources and dependencies are unchanged.
 - Prepared the matching sanitized public-source commit. No GitHub publication, installer build, actual login or managed-state cleanup is part of this documentation task.
 - Continue with GitHub CI and contribution-entry preparation.
+
+# 2026-10-29 GitHub CI And Contribution Entry Points
+
+- Added pinned read-only Frontend and Windows Rust workflows, contributing/security documents, two validated Issue forms and the PR template. Linked contribution and security guidance from README.
+- Workflow syntax passed actionlint; forms passed their schema and unique-ID checks. No project secrets or publication permissions are required.
+- Verified workflow commands in a clean local checkout using Node 24.15.0/npm 11.12.1 and explicitly installed Rust 1.96.1: typecheck, 214 frontend tests, reproducible dist and 788 serial Rust tests passed, with six external/browser acceptance tests ignored.
+- Probed the output guard in an isolated disposable Git repository: clean baseline passed, changed tracked and unexpected untracked outputs were both rejected. Documentation links and privacy checks passed.
+- Prepared the matching sanitized public-source commit. No GitHub-hosted workflow has run yet, and no GitHub publication or installer build is part of this item. The next step is choosing and explicitly authorizing the first source-publication destination and scope.
